@@ -1,37 +1,84 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 
+public class android extends AppCompatActivity implements View.OnClickListener {
 
-public class android extends AppCompatActivity {
-    String androidlist[] = {"Introduction to Android Studio", "Android Studio Basics", "Creating Your First App in Android Studio", "What is AVD?", "Using and Configuring AVD", "How to make your app run", "Custom Menus, Notification, and Toast"};
-    int androidImages []= {R.drawable.a_introduction, R.drawable.a_basics, R.drawable.a_create, R.drawable.a_avd, R.drawable.a_config, R.drawable.a_run,R.drawable.a_tmn };
+    private CardView card1, card2, card3, card4, card5, card6;
 
-
-    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        listView = (ListView) findViewById(R.id.as_topiclist);
-        AndroidBaseAdapter androidBaseAdapter = new AndroidBaseAdapter(getApplicationContext(), androidlist, androidImages);
-        listView.setAdapter(androidBaseAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.i("ANDROID_LIST_VIEW", "Item is clicked @ Position :: " +position);
-            }
-        });
+
+        card1 = (CardView) findViewById(R.id.a_intro);
+        card2 = (CardView) findViewById(R.id.a_basics);
+        card3 = (CardView) findViewById(R.id.a_ui);
+        card4 = (CardView) findViewById(R.id.create);
+        card5 = (CardView) findViewById(R.id.avd);
+        card6 = (CardView) findViewById(R.id.run);
 
 
+
+        card1.setOnClickListener((View.OnClickListener) this);
+        card2.setOnClickListener((View.OnClickListener) this);
+        card3.setOnClickListener((View.OnClickListener) this);
+        card4.setOnClickListener((View.OnClickListener) this);
+        card5.setOnClickListener((View.OnClickListener) this);
+        card6.setOnClickListener((View.OnClickListener) this);
+
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        Intent i;
+
+        switch (v.getId()) {
+
+            case R.id.a_intro:
+                i = new Intent(this,as_intro.class);
+                startActivity(i);
+                break;
+
+            case R.id.a_basics:
+                i = new Intent(this, as_basic.class);
+                startActivity(i);
+                break;
+
+            case R.id.a_ui:
+                i = new Intent(this, as_ui.class);
+                startActivity(i);
+                break;
+
+            case R.id.create:
+                i = new Intent(this, as_create.class);
+                startActivity(i);
+                break;
+
+            case R.id.avd:
+                i = new Intent(this, as_avd.class);
+                startActivity(i);
+                break;
+
+            case R.id.run:
+                i = new Intent(this, as_run.class);
+                startActivity(i);
+                break;
+
+
+
+        }
     }
 }
 

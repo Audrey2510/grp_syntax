@@ -4,54 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/intro_bg"
-    tools:context=".as_avd">
-
+    android:background="@drawable/andriod5"
+    tools:context=".s_intro">
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="175dp"
-        android:fontFamily="@font/antonio_bold"
-        android:text="What is AVD?"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="168dp"
+        android:text="Introduction to SQL"
         android:textColor="#000"
         android:textSize="40dp"
+        android:gravity="center"
+        android:fontFamily="@font/antonio_bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/antonio_light"
+        android:text="What is SQL"
+        android:textColor="#000"
+        android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:srcCompat="@drawable/avd_a" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
 
     <ScrollView
-        android:layout_width="390dp"
-        android:layout_height="446dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="403dp"
+        android:layout_height="517dp"
+        android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4">
-
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/a_avd"
-            android:fontFamily="@font/antonio_regular"
+            android:text="@string/s_intro"
             android:textSize="25dp"
-            android:autoLink="web"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:fontFamily="@font/antonio_regular"/>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,53 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/intro_bg"
-    tools:context=".as_avd">
+    tools:context=".as_ui">
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="175dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/antonio_bold"
-        android:text="What is AVD?"
+        android:gravity="center"
+        android:text="Android Studio User Interface"
         android:textColor="#000"
-        android:textSize="40dp"
+        android:textSize="50dp"
+        android:autoLink="web"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:id="@+id/imageView3"
+        android:layout_width="407dp"
+        android:layout_height="324dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:srcCompat="@drawable/avd_a" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/ui_a" />
 
     <ScrollView
-        android:layout_width="390dp"
-        android:layout_height="446dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="391dp"
+        android:layout_height="273dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/a_avd"
-            android:fontFamily="@font/antonio_regular"
+            android:text="@string/a_ui"
             android:textSize="25dp"
-            android:autoLink="web"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:fontFamily="@font/antonio_regular"/>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

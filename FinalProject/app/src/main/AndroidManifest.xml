@@ -4,22 +4,55 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/pal"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/pal"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".android_list_view"
+            android:name=".j_string"
             android:exported="false" />
         <activity
-            android:name=".as_tmn"
+            android:name=".j_op"
+            android:exported="false" />
+        <activity
+            android:name=".jdt"
+            android:exported="false" />
+        <activity
+            android:name=".j_var"
+            android:exported="false" />
+        <activity
+            android:name=".j_intro"
+            android:exported="false" />
+        <activity
+            android:name=".case_statement"
+            android:exported="false" />
+        <activity
+            android:name=".where_clause"
+            android:exported="false" />
+        <activity
+            android:name=".null_value"
+            android:exported="false" />
+        <activity
+            android:name=".update_statement"
+            android:exported="false" />
+        <activity
+            android:name=".s_obk"
+            android:exported="false" />
+        <activity
+            android:name=".aon_operator"
+            android:exported="false" />
+        <activity
+            android:name=".ssb"
+            android:exported="false" />
+        <activity
+            android:name=".s_intro"
             android:exported="false" />
         <activity
             android:name=".as_run"
             android:exported="false" />
         <activity
-            android:name=".as_config"
+            android:name=".as_ui"
             android:exported="false" />
         <activity
             android:name=".as_avd"

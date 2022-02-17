@@ -7,11 +7,36 @@
         <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1785" />
         <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_android.xml" value="0.12" />
         <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_android_list_view.xml" value="0.1796875" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_aon_operator.xml" value="0.13949275362318841" />
         <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_as_avd.xml" value="0.1" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_as_basic.xml" value="0.16666666666666666" />
         <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_as_config.xml" value="0.1" />
-        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_as_run.xml" value="0.1" />
-        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_as_create.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_as_intro.xml" value="0.22" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_as_run.xml" value="0.22" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_as_tmn.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_as_ui.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_case_statement.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_html.xml" value="0.1796875" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_java.xml" value="0.1796875" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_jdt.xml" value="0.1" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_jintro.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_jop.xml" value="0.12" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_jstring.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_jvar.xml" value="0.1" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_like.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_null_value.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_python.xml" value="0.1" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_s_intro.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_sobk.xml" value="0.13949275362318841" />
         <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_sql.xml" value="0.14130434782608695" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_ssb.xml" value="0.1" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_update_statement.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/activity_where_clause.xml" value="0.13949275362318841" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/layout/java_recycler_row.xml" value="0.22" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Dell/B2019_Group9a/FinalProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>
