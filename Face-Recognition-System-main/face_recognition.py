@@ -1,18 +1,17 @@
 from tkinter import *
 from tkinter import ttk
-import cap as cap
 from PIL import Image, ImageTk
 from tkinter import messagebox
 import mysql.connector
 from time import strftime
 from datetime import datetime
 import cv2
-import numpy
+import numpy as np
 import os
-from matplotlib.pyplot import clf
 
 
-def varchar(param):
+
+def recognize(img, clf, face_cascade):
     pass
 
 
@@ -50,6 +49,7 @@ class Face_Recognition:
         b1_1.place(x=200, y=550, width=200, height=40)
 
     # ========Attendance========
+
     def mark_attendance(self, i, r, n, d):
         with open("MyTest.csv", "r+", newline="\n") as f:
             myDataList = f.readlines()
@@ -64,12 +64,13 @@ class Face_Recognition:
                 f.writelines(f"\n{i},{r},{n},{d},{dtString},{d1},Present")
 
     # =======face recognition=====
-    def face_recognition(self):
-        def draw_boundary(img, scaleFactor, minNeighbors, color, text, clf):
-            gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            faces = face_cascade.detectMultiScale(gray_image, scaleFactor, minNeighbors)
 
-            coord = []
+    def face_recognition(self, face_cascade=None):
+        def draw_boundary(img, scaleFactor, minNeighbors, color, text, clf, classifier=None):
+            gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            faces = classifier.detectMultiScale(gray_image, scaleFactor, minNeighbors)
+
+            coord=[]
             for (x, y, w, h) in faces:
                 cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 3)
                 id, predict = clf.predict(gray_image[y:y + h, x:x + w])
@@ -114,7 +115,7 @@ class Face_Recognition:
 
 
                 if confidence > 77:
-                    cv2.putText(img, f"id:{i}", (x, y - 75), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 255, 255), 3)
+                    cv2.putText(img, f"Id:{i}", (x, y - 75), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 255, 255), 3)
                     cv2.putText(img, f"Registration:{r}", (x, y - 55), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 255, 255), 3)
                     cv2.putText(img, f"Name:{n}", (x, y - 30), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 255, 255), 3)
                     cv2.putText(img, f"Department:{d}", (x, y - 5), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 255, 255), 3)
@@ -128,42 +129,30 @@ class Face_Recognition:
                 coord = [x, y, w, h]
             return coord
 
-        def recognize(img, clf, face_cascade):
-            coord = draw_boundary(img, 1.1, 10, (255, 25, 255), "Face", clf)
+            def recognizer(img, clf, face_cascade):
+                coord = draw_boundary(img, 1.1, 10, (255, 25, 255), "face", recognizer)
 
             return img
 
-        face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+        face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+        recognizer = cv2.face.LBPHFaceRecognizer_create()
+        recognizer(r"classifier.xml")
 
-
-        cap = cv2.VideoCapture(0)  # it was 0 inside
+        video_cap = cv2.VideoCapture(0)  # it was 0 inside
 
         while True:
+
             while True:
-                # Read the frame
-                _, img = cap.read()
 
-                # Convert to grayscale
-                gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                ret, img = video_cap.read()
+                from matplotlib.pyplot import clf
+                img = recognize(img, clf, face_cascade)
+                cv2.imshow("Welcome to Face Recognition", img)
 
-                # Detect the faces
-                faces = face_cascade.detectMultiScale(gray, 1.1, 4)
-
-                # Draw the rectangle around each face
-                for (x, y, w, h) in faces:
-                    cv2.rectangle(img, (x, y), (x + w, y + h), ( 0, 225, 0), 5)
-
-                # Display
-                cv2.imshow('Welcome to Face Recognition', img)
-
-                # Stop if escape key is pressed
-                k = cv2.waitKey(30) & 0xff
-                if k == 27:
+                if cv2.waitKey(0) == 13:
                     break
-
-
-            # Release the VideoCapture object
-            cap.release()
+            video_cap.release()
+            cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":

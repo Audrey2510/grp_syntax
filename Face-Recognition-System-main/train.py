@@ -11,7 +11,7 @@ class Train:
 	def __init__(self, root):
 		self.root=root
 		self.root.geometry("1530x790+0+0")
-		self.root.title("Face Recongnition System")
+		self.root.title("Face Recognition System")
 
 
 		title_lbl=Label(self.root,text="TRAIN DATA SET",font=("Sketchy In Snow", 35,"bold"),bg="red",fg="white")
@@ -61,7 +61,7 @@ class Train:
 		#=====Train the Classifier===
 		clf=cv2.face.LBPHFaceRecognizer_create()
 		clf.train(faces, ids)
-		clf.write("classifier.xml")
+		clf.save("classifier.yml")
 		cv2.destroyAllWindows()
 		messagebox.showinfo("Result", "Training Data sets is completed!")	
 
